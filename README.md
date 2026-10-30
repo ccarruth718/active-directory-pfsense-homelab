@@ -77,13 +77,25 @@ The workstation used `192.168.10.10` for DNS and `192.168.10.1` as its default g
 
 Used **Active Directory Users and Computers (ADUC)** to inspect the domain's OU structure and verify that the example user and security group existed.
 
-## Screenshots
+## Screenshots and evidence
 
-Three validation screenshots were captured during the lab and are being prepared for inclusion here:
+### 1. Domain authentication
 
-- Domain authentication and logon server
-- DNS resolution and gateway connectivity
-- Active Directory users, groups, and OUs
+The Windows 11 workstation was signed in as `corp\amorgan`. PowerShell checks confirmed the workstation name (`Windows11-Works`) and the logon server (`\\DC01`).
+
+![Windows domain authentication and logon server validation](01-domain-authentication.png)
+
+### 2. DNS resolution and gateway connectivity
+
+The workstation resolved `corp.cyberlab.test` to `192.168.10.10` and successfully pinged the pfSense LAN gateway at `192.168.10.1`.
+
+![DNS resolution and network connectivity validation](02-dns-network-validation.png)
+
+### 3. Active Directory users and groups
+
+Active Directory Users and Computers shows the custom `Cyberlab` organizational unit, the **Alex Morgan** user account, and the **IT-Staff** security group.
+
+![Active Directory Users and Computers showing lab objects](03-active-directory-users-groups.png)
 
 ## Skills practiced
 
