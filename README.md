@@ -83,13 +83,13 @@ Used **Active Directory Users and Computers (ADUC)** to inspect the domain's OU 
 
 The Windows 11 workstation was signed in as `corp\amorgan`. PowerShell checks confirmed the workstation name (`Windows11-Works`) and the logon server (`\\DC01`).
 
-![Windows domain authentication and logon server validation](01-domain-authentication.png)
+![Windows domain authentication and logon server validation](01-domain-authentication%20%281%29.png)
 
 ### 2. DNS resolution and gateway connectivity
 
 The workstation resolved `corp.cyberlab.test` to `192.168.10.10` and successfully pinged the pfSense LAN gateway at `192.168.10.1`.
 
-![DNS resolution and network connectivity validation](02-dns-network-validation.png)
+![DNS resolution and network connectivity validation](02-dns-network-validation%20%281%29.png)
 
 ### 3. Active Directory users and groups
 
